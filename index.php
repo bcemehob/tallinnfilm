@@ -1,1 +1,3 @@
-echo "tallinnfilm ."
+<?php
+echo "tallinnfilm .";
+?>
