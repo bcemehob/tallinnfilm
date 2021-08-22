@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <img alt="band photo" src="../assets/main.jpg">
+    <MiddleSnippet/>
     <h1>{{ msg }}</h1>
     <p>
       official page
@@ -9,10 +9,15 @@
 </template>
 
 <script>
+import MiddleSnippet from './MiddleSnippet.vue'
+
 export default {
   name: 'Main',
   props: {
     msg: String
+  },
+  components: {
+    MiddleSnippet
   }
 }
 </script>
