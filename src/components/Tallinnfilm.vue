@@ -1,7 +1,7 @@
 <template lang="pug">
   .wrap
     Header
-    transition(name="routerf" appear)
+    transition(name="routerf")
       router-view(name="main")
     Footer
 </template>

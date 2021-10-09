@@ -19,12 +19,14 @@ export default {
 <style lang="scss" scoped>
 
 .menu{
+  opacity: 0;
   font-size: 16px;
   position: absolute;
   top: 340px;
+  transition: opacity .3s ease;
 }
 .active {
-  color: red;
+  opacity: 1;
 }
 
 </style>

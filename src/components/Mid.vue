@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello
-    .clickable(@click="toggleMenu()")
-      MiddleSnippet(isMenuOpen="{isMenuOpen}")
+    .clickable()
+      MiddleSnippet(:isMenuOpen='isMenuOpen' @toggle-menu="toggleMenu")
       h1 {{ msg }}
       p official page
 </template>
@@ -31,8 +31,11 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.routerf-leave-active {
+  height: 0;
+}
+
 h3 {
   margin: 40px 0 0;
 }

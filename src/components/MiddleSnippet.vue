@@ -2,8 +2,8 @@
   .snippet-main-wrap
     .snippet-wrap
       .snippet
-        Menu(isMenuOpen={isMenuOpen})
-        h1(data-text="Tallinnfilm")
+        Menu(:isMenuOpen='isMenuOpen')
+        h1(data-text="Tallinnfilm" @click="toggleMenu()")
           span Tallinnfilm
       Blinking
 </template>
@@ -12,13 +12,18 @@
 import Blinking from './Blinking'
 import Menu from './Menu'
 export default {
+  name: "MiddleSnippet",
   components: {
     Blinking, Menu
   },
   props: {
     isMenuOpen: Boolean
   },
-  name: "MiddleSnippet"
+  methods: {
+    toggleMenu() {
+      this.$emit("toggle-menu");
+    }
+  }
 }
 </script>
 

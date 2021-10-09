@@ -64,7 +64,6 @@ export default {
   }
 }
 .routerf-leave-active {
-  //opacity: 0;
   height: 0;
   animation: .2s linear slideout;
 }
