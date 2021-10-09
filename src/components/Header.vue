@@ -1,7 +1,6 @@
-<template>
-  <div class="header-wrap">
-   <div>header</div>
-  </div>
+<template lang="pug">
+  .header-wrap
+    div Tallinnfilm rock band
 </template>
 
 <script>

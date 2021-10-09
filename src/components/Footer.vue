@@ -1,9 +1,7 @@
-<template>
-  <div class="footer-wrap">
-    <div class="tallinnfilm-logo">
-      <img alt="Tallinnfilm logo" src="../assets/logo.png">
-    </div>
-  </div>
+<template lang="pug">
+  .footer-wrap
+    .tallinnfilm-logo
+      img(alt='Tallinnfilm logo' src='../assets/logo.png')
 </template>
 
 <script>

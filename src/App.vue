@@ -1,10 +1,8 @@
-<template>
-  <div id="app">
-    <div class="back">
-      <img alt="background" src="./assets/main.jpg">
-    </div>
-    <Tallinnfilm/>
-  </div>
+<template lang="pug">
+  #app
+    .back
+      img(alt="background" src="./assets/main.jpg")
+    Tallinnfilm
 </template>
 
 <script>
@@ -19,6 +17,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Material+Icons');
+
 body {
   margin: 0;
   background-color: #18185d;

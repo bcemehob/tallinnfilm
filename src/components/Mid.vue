@@ -1,15 +1,14 @@
-<template>
-  <div class="hello">
-    <MiddleSnippet/>
-    <h1>{{ msg }}</h1>
-    <p>
-      official page
-    </p>
-  </div>
+<template lang="pug">
+  .hello
+    .clickable(@click="toggleMenu()")
+      MiddleSnippet(isMenuOpen="{isMenuOpen}")
+      h1 {{ msg }}
+      p official page
 </template>
 
 <script>
 import MiddleSnippet from './MiddleSnippet.vue'
+import Menu from './Menu.vue'
 
 export default {
   name: 'Main',
@@ -17,7 +16,17 @@ export default {
     msg: String
   },
   components: {
-    MiddleSnippet
+    MiddleSnippet, Menu
+  },
+  data() {
+    return {
+      isMenuOpen: false
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen
+    }
   }
 }
 </script>
@@ -37,6 +46,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.clickable {
+  cursor: pointer;
 }
 
 </style>
