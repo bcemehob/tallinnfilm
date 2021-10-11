@@ -21,14 +21,14 @@ export default {
 
 @font-face {
   font-family: Tallinnfilm;
-  src: url('~@/assets/tallinnfilm.ttf');
+  src: url('./assets/tallinnfilm.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: Orbitron;
-  src: url('~@/assets/Orbitron-Regular.ttf');
+  src: url('./assets/Orbitron-Regular.ttf');
   font-weight: normal;
   font-style: normal;
 }

@@ -3,10 +3,10 @@
     .snippet
       .thumb-wrap(v-if="!videoId")
         .thumb(@click="startVideo(0)")
-          img(src='~@/assets/vid_thumb2.png')
+          img(src='../assets/vid_thumb2.png')
           .label Promo video 2020
         .thumb(@click="startVideo(1)")
-          img(src='~@/assets/vid_thumb1.png')
+          img(src='../assets/vid_thumb1.png')
           .label Tsoi songs performance on Aug 15, 2021 in Tallinn
       Video(v-if="videoId")
 </template>
