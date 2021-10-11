@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello
     .clickable()
-      MiddleSnippet(:isMenuOpen='isMenuOpen' @toggle-menu="toggleMenu")
+      MiddleSnippet
       h1 {{ msg }}
       p official page
 </template>
@@ -18,16 +18,7 @@ export default {
   components: {
     MiddleSnippet, Menu
   },
-  data() {
-    return {
-      isMenuOpen: false
-    }
-  },
-  methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen
-    }
-  }
+
 }
 </script>
 

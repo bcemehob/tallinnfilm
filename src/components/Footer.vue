@@ -13,15 +13,17 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.tallinnfilm-logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 70px;
-}
-.tallinnfilm-logo img {
-  width: 20px;
+<style lang="scss" scoped>
+.footer-wrap {
+  margin: 20px;
+  .tallinnfilm-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+  }
+  .tallinnfilm-logo img {
+    width: 20px;
+  }
 }
 
 

@@ -1,7 +1,9 @@
 <template lang="pug">
   SlidingPane
     .snippet
-      .info Info about Tallinnfilm rock group goes here
+      .info Some important information about Tallinnfilm rock band coming soon.
+      .info ----------------
+      .info Keep in touch!
 </template>
 
 <script>
@@ -14,4 +16,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.snippet {
+  flex-flow: column;
+  .info {
+    display: block;
+    font-size: 14px;
+  }
+
+}
 </style>

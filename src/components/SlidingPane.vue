@@ -1,14 +1,19 @@
 <template lang="pug">
   .main-wrap
-    router-link(to='/')
-      .mw-header
+    .mw-header
+      .title {{ title }}
+      router-link(to='/')
+        .close
     .snippet-wrap
       slot
 </template>
 
 <script>
 export default {
-  name: "SlidingPane"
+  name: "SlidingPane",
+  props: {
+    title: String
+  }
 }
 </script>
 
@@ -20,26 +25,37 @@ export default {
   background-color: rgba(1, 38, 35, 0.55);
   //animation: .2s linear slidein;
   .mw-header {
+    font-size: 22px;
     position: relative;
+    display: flex;
+    flex-flow: row;
     border-radius: 27px 27px 0 0;
     height: 54px;
     background-image: linear-gradient(rgba(0, 17, 14, 0.85), rgba(1, 38, 35, 0));
-    &:before {
-      cursor: pointer;
-      font-family: "Material Icons", sans-serif;
-      position: absolute;
-      top:12px;
-      right:12px;
-      font-size: 33px;
-      width: 30px;
-      height: 30px;
-      color: #8fcfff;
-      text-align: right;
-      content: 'close'
+    .title {
+      padding: 20px;
     }
-
+    .close {
+      color: #8fcfff;
+      transition: color .15s ease;
+      &:before {
+        cursor: pointer;
+        font-family: Tallinnfilm, sans-serif;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 30px;
+        height: 30px;
+        text-align: right;
+        content: '\e976';
+      }
+      &:hover {
+        color: #fff;
+      }
+    }
   }
 }
+
 @keyframes slidein {
   from {
     margin-left: 100%;
@@ -51,6 +67,7 @@ export default {
     width: 100%;
   }
 }
+
 @keyframes slideout {
   from {
 
@@ -63,13 +80,15 @@ export default {
     width: 0;
   }
 }
+
 .routerf-leave-active {
   height: 0;
-  animation: .2s linear slideout;
+  animation: .2s ease slideout;
 }
+
 .routerf-enter-active {
   opacity: 1;
-  animation: .2s linear slidein;
+  animation: .2s ease slidein;
 }
 
 .routerf-enter {
@@ -78,16 +97,17 @@ export default {
 
 .snippet {
   width: 200vh;
-  height: 100vh;
+  height: 98.3vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
   overflow: hidden;
-  font-family: 'Amatic SC', sans-serif;
+  font-family: Orbitron, sans-serif;
   font-size: 100px;
 
 }
+
 .snippet-wrap {
   width: 100%;
   display: flex;

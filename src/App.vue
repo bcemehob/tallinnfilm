@@ -8,6 +8,7 @@
 <script>
 import Tallinnfilm from './components/Tallinnfilm.vue'
 
+
 export default {
   name: 'App',
   components: {
@@ -17,15 +18,30 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Material+Icons');
+
+@font-face {
+  font-family: Tallinnfilm;
+  src: url('~@/assets/tallinnfilm.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Orbitron;
+  src: url('~@/assets/Orbitron-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 body {
   margin: 0;
   background-color: #18185d;
   overflow-y: hidden;
 }
+
 #app {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: Orbitron, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -38,9 +54,10 @@ body {
   perspective: 2px;
 
 }
+
 .back {
   position: absolute;
-  width:100%;
+  width: 100%;
   height: 100%;
   background: url(./assets/main.jpg) no-repeat center top;
   background-blend-mode: soft-light;
@@ -49,12 +66,14 @@ body {
   background-size: cover;
   transform-style: preserve-3d;
   transform: translateZ(-3.5px) scale(3.5);
+
   img {
     width: 100%;
     max-width: 100%;
     visibility: hidden;
   }
 }
+
 .wrap {
   transform: scale(0.9);
 }

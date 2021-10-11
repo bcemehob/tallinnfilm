@@ -2,7 +2,7 @@
   .snippet-main-wrap
     .snippet-wrap
       .snippet
-        Menu(:isMenuOpen='isMenuOpen')
+        Menu
         h1(data-text="Tallinnfilm" @click="toggleMenu()")
           span Tallinnfilm
       Blinking
@@ -16,24 +16,23 @@ export default {
   components: {
     Blinking, Menu
   },
-  props: {
-    isMenuOpen: Boolean
-  },
   methods: {
     toggleMenu() {
-      this.$emit("toggle-menu");
+      this.$store.dispatch('toggleMenu')
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+
 .snippet-wrap {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .snippet {
   width: 200vh;
   height: 100vh;
@@ -52,11 +51,15 @@ export default {
 .effect {
   width: 0;
 }
+
 h1 {
+  font-family: Orbitron, cursive;
+  font-style: italic;
   position: relative;
   font-size: calc(20px + 5vw);
   font-weight: 700;
   color: #fff;
+  margin-top: -10px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0 0 0.15em #1da9cc;
@@ -82,6 +85,7 @@ h1::after {
   top: 0;
   left: 0;
 }
+
 @keyframes shake {
   5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
     filter: blur(0.018em);
