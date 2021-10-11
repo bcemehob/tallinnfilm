@@ -2,7 +2,7 @@
   SlidingPane
     .snippet
       .info Some important information about Tallinnfilm rock band coming soon.
-      .info ----------------
+      .info ------------------
       .info Keep in touch!
 </template>
 
