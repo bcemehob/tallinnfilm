@@ -23,7 +23,6 @@ export default {
   border-top: 1px solid rgba(0, 7, 7, 0.55);
   border-left: 3px solid rgba(0, 7, 7, 0.55);
   background-color: rgba(1, 38, 35, 0.55);
-  //animation: .2s linear slidein;
   .mw-header {
     font-size: 22px;
     position: relative;
@@ -59,7 +58,7 @@ export default {
 @keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%
+    width: 100%
   }
 
   to {
@@ -70,14 +69,13 @@ export default {
 
 @keyframes slideout {
   from {
-
-    margin-right: 0;
+    margin-left: 0;
     width: 100%
   }
 
   to {
-    margin-right: 100%;
-    width: 0;
+    margin-left: 100%;
+    width: 100%
   }
 }
 

@@ -29,7 +29,7 @@ export default {
   @media (max-width: 500px) {
     height: unset;
     text-align: right;
-    margin-top: -100%;
+    margin-top: -30%;
     margin-bottom: 0;
   }
 

@@ -50,9 +50,12 @@ export default {
 
   .overlay {
     opacity: .5;
+    @media (max-width: 768px) {
+      opacity: 1;
+    }
     transition: opacity .2s ease;
-    height: 20px;
-    width: 40px;
+    height: 80px;
+    width: 80px;
     position: absolute;
     top: 0;
     right: 0;

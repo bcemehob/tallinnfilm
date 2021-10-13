@@ -1,6 +1,6 @@
 <template lang="pug">
   .header-wrap
-    div Tallinnfilm rock band
+    div The ultimate cover rock band
 </template>
 
 <script>

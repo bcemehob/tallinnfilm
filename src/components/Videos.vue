@@ -8,6 +8,9 @@
         .thumb(@click="startVideo(1)")
           img(src='./../assets/vid_thumb1.png')
           .label Tsoi songs performance on Aug 15, 2021 in Tallinn
+        .thumb(@click="startVideo(2)")
+          img(src='./../assets/vid_thumb3.png')
+          .label The Game song performance on Jun 15, 2021 at Elupuu fest
       Video(v-if="videoId")
 </template>
 
@@ -15,7 +18,7 @@
 import SlidingPane from "./SlidingPane"
 import Video from "./Video"
 
-const VIDEO_IDS=['-Z6WXAWMjl0','QTuGIZd05QI'];
+const VIDEO_IDS=['-Z6WXAWMjl0','QTuGIZd05QI','6TxIQCuKfgo'];
 
 
 export default {
@@ -73,6 +76,9 @@ h3 {
   flex-flow: row;
   justify-content: left;
   margin-top: 100px;
+  @media (max-width: 768px) {
+    flex-flow: column;
+  }
   .thumb {
     margin: 20px;
     max-width: 250px;
