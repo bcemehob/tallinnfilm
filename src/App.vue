@@ -33,6 +33,9 @@ export default {
   font-style: normal;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
 body {
   margin: 0;
