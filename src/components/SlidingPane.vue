@@ -100,7 +100,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  overflow: hidden;
+  overflow: auto;
   font-family: Orbitron, sans-serif;
   font-size: 100px;
 
