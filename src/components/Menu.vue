@@ -5,6 +5,8 @@
         li.info info
       router-link(to='/video')
         li.video video
+      router-link(to='/review')
+        li.review review
 </template>
 
 <script>
@@ -31,9 +33,17 @@ export default {
     text-align: right;
     margin-top: -30%;
     margin-bottom: 0;
+    width: 100%;
+
   }
 
   ol.main-menu {
+    @media (max-width: 500px) {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+    }
+
     font-size: 25px;
     a {
       li {
@@ -49,6 +59,9 @@ export default {
         }
         &.info:before {
           content: '\e937';
+        }
+        &.review:before {
+          content: '\e938';
         }
         &:before {
           font-family: Tallinnfilm;

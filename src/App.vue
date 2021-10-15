@@ -33,6 +33,13 @@ export default {
   font-style: normal;
 }
 
+@font-face {
+  font-family: Jura;
+  src: url('./assets/Jura-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
 }
