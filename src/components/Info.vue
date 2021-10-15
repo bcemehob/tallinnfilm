@@ -26,14 +26,17 @@ export default {
   text-align: left;
   padding: 0 15px 15px;
   justify-content: start;
+  align-items: flex-start;
+  margin: 20px;
+
   .header {
     font-size: 20px;
     font-weight: 600;
-    margin: 20px;
+    margin: 20px 0;
   }
   .info {
     display: block;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     margin-bottom: 12px;
   }

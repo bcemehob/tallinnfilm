@@ -23,14 +23,15 @@ export default {
   font-family: Jura, sans-serif;
   flex-flow: column;
   text-align: left;
-  padding: 0 15px 15px;
+  padding: 0 20px 20px;
+  align-items: flex-start;
   justify-content: start;
   a {
     color: #8fcfff;
     text-decoration: none;
     font-size: 20px;
     font-weight: 900;
-    margin: 20px;
+    margin: 20px 0;
   }
   .info {
     display: block;
@@ -38,6 +39,5 @@ export default {
     font-weight: 500;
     margin-bottom: 12px;
   }
-
 }
 </style>

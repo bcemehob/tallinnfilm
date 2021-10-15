@@ -1,12 +1,12 @@
 <template lang="pug">
   .menu(:class='{active:isMenuOpen}')
     ol.main-menu
-      router-link(to='/info')
-        li.info info
-      router-link(to='/video')
-        li.video video
-      router-link(to='/review')
-        li.review review
+      li.info
+        router-link(to='/info') info
+      li.video
+        router-link(to='/video') video
+      li.review
+        router-link(to='/review') review
 </template>
 
 <script>
@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss" scoped>
 
-.menu{
+.menu {
   opacity: 0;
   height: 0;
   margin-bottom: 75px;
@@ -45,27 +45,41 @@ export default {
     }
 
     font-size: 25px;
-    a {
-      li {
-        padding: 10px 20px;
+
+    li {
+      &:before {
+        font-family: Tallinnfilm;
+        padding-right: 6px;
+        color: #aaefe7;
+        transition: color .2s ease;
+
+      }
+
+      padding: 10px 20px;
+      &:hover:before {
+        color: #fff;
+        transition: color .2s ease-in-out;
+
+      }
+
+      &.video:before {
+        content: '\e955';
+      }
+
+      &.info:before {
+        content: '\e937';
+      }
+
+      &.review:before {
+        content: '\e938';
+      }
+      a {
+        text-decoration: none;
         font-family: Orbitron, sans-serif;
         color: #aaefe7;
         transition: color .2s ease-in-out;
         &:hover {
           color: #ffffff;
-        }
-        &.video:before {
-          content: '\e955';
-        }
-        &.info:before {
-          content: '\e937';
-        }
-        &.review:before {
-          content: '\e938';
-        }
-        &:before {
-          font-family: Tallinnfilm;
-          padding-right: 6px;
         }
 
       }
