@@ -7,6 +7,8 @@
         router-link(to='/video') video
       li.review
         router-link(to='/review') review
+      li.fb
+        a(href='https://www.facebook.com/Tallinnfilm-102142218935952' target='_blank') latest news
 </template>
 
 <script>
@@ -31,7 +33,7 @@ export default {
   @media (max-width: 500px) {
     height: unset;
     text-align: right;
-    margin-top: -30%;
+    margin-top: -50%;
     margin-bottom: 0;
     width: 100%;
 
@@ -72,6 +74,9 @@ export default {
 
       &.review:before {
         content: '\e938';
+      }
+      &.fb:before {
+        content: '\ea90';
       }
       a {
         text-decoration: none;
