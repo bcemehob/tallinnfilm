@@ -1,0 +1,8 @@
+
+https://github.com/bcemehob/tallinnfilm.git
+
+git clone https://bcemehob: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@github.com/bcemehob/tallinnfilm.git
+
+cd tallinnfilm
+
+git remote set-url origin https://bcemehob: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@github.com/bcemehob/tallinnfilm.git
