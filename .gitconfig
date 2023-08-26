@@ -1,0 +1,5 @@
+[user]
+   name = bcemehob
+   email = bagum.cemehob@gmail.com
+[credential]
+   helper = store --file ./.git-credentials
