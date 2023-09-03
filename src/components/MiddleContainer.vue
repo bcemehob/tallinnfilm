@@ -40,13 +40,13 @@ function shuffle(arr) {
 
 function changeContainer() {
   let newIndex = currentContainer
-  while (newIndex == currentContainer) {
+  while (newIndex === currentContainer) {
     newIndex = Math.floor(Math.random() * 4)
   }
   currentContainer = newIndex
 }
 function changeImage() {
-  currentImage = currentImage == NUMBER_OF_IMAGES - 1 ? 0 : ++currentImage
+  currentImage = currentImage === NUMBER_OF_IMAGES - 1 ? 0 : ++currentImage
 }
 
 export default {
@@ -55,14 +55,14 @@ export default {
       setTimeout(() => {
         changeContainer()
         let container = document.getElementById("imgContainer").children[currentContainer]
-        let className = " slide" + (new Number(array[currentImage]) + 1)
+        let className = " slide" + (Number(array[currentImage]) + 1)
         container.className = "anim" + className
         changeImage()
         setTimeout(() => {
           container.className = "dark" + className
-        }, "2000")
+        }, 2000)
         this.doByTimeout()
-      }, "3000");
+      }, 3000);
 
     },
 
@@ -74,8 +74,3 @@ export default {
   }
 } 
 </script>
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
