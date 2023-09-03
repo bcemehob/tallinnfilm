@@ -5,7 +5,6 @@
     <div></div>
     <div></div>
   </div>
-  <div>{{ msg }}</div>
 </template>
 
 <script setup>
@@ -13,13 +12,6 @@
 defineProps({
   msg: String,
 })
-
-function randomClass() {
-  return "slide" + (Math.floor(Math.random() * 6) + 1)
-}
-function change() {
-
-}
 
 </script>
 <script>
