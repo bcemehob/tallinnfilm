@@ -12,7 +12,6 @@
 defineProps({
   msg: String,
 })
-
 </script>
 <script>
 const NUMBER_OF_IMAGES = 16
@@ -20,7 +19,7 @@ let currentImage = 0
 let currentContainer = 1
 let array = shuffle([...Array(NUMBER_OF_IMAGES).keys()])
 function shuffle(arr) {
-  var m = arr.length, t, i
+  let m = arr.length, t, i
   while (m) {
     i = Math.floor(Math.random() * m--);
     t = arr[m];
@@ -38,7 +37,7 @@ function changeContainer() {
   currentContainer = newIndex
 }
 function changeImage() {
-  currentImage = currentImage === NUMBER_OF_IMAGES - 1 ? 0 : ++currentImage
+  currentImage = currentImage !== NUMBER_OF_IMAGES - 1 ? ++currentImage : 0
 }
 
 export default {
