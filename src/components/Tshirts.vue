@@ -17,11 +17,8 @@ export default {
   },
   methods: {
     hideList() {
-      this.$emit('hide-tshirts')
+      this.$emit('hide-subpage')
     },
-    showLinks() {
-      console.log("SHOW LINSK")
-    }
   },
   mounted() {
   }

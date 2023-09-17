@@ -25,11 +25,8 @@ export default {
   },
   methods: {
     hideList() {
-      this.$emit('hide-links')
+      this.$emit('hide-subpage')
     },
-    showLinks() {
-      console.log("SHOW LINSK")
-    }
   },
   mounted() {
   }

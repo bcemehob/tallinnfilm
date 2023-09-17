@@ -5,8 +5,8 @@
       <li class="clickable" @click="toggleLinks">links</li>
       <li class="clickable" @click="toggleTshirts">t-shirts</li>
     </ul>
-    <Links v-if="linksShown" @hide-links="onHideLinks"/>
-    <Tshirts v-if="tShirtsShown" @hide-tshirts="onHideTshirts"/>
+    <Links v-if="linksShown" @hide-subpage="onHideSubpage"/>
+    <Tshirts v-if="tShirtsShown" @hide-subpage="onHideSubpage"/>
   </div>
 </template>
 
@@ -40,12 +40,10 @@ export default {
       this.tShirtsShown = !this.tShirtsShown;
       this.toggleMenu();
     },
-    onHideLinks() {
+    onHideSubpage() {
       this.linksShown = false;
-    },
-    onHideTshirts() {
       this.tShirtsShown = false;
-    }
+    },
   },
   mounted() {
   }
