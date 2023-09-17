@@ -14,9 +14,9 @@ defineProps({
 })
 </script>
 <script>
-const NUMBER_OF_IMAGES = 16
+const NUMBER_OF_IMAGES = 25
 let currentImage = 0
-let currentContainer = 1
+let currentContainerIndex = 1
 let array = shuffle([...Array(NUMBER_OF_IMAGES).keys()])
 function shuffle(arr) {
   let m = arr.length, t, i
@@ -30,38 +30,58 @@ function shuffle(arr) {
 }
 
 function changeContainer() {
-  let newIndex = currentContainer
-  while (newIndex === currentContainer) {
+  let newIndex = currentContainerIndex
+  while (newIndex === currentContainerIndex) {
     newIndex = Math.floor(Math.random() * 4)
   }
-  currentContainer = newIndex
+  currentContainerIndex = newIndex
+}
+function setContainer(index) {
+  currentContainerIndex = index
 }
 function changeImage() {
   currentImage = currentImage !== NUMBER_OF_IMAGES - 1 ? ++currentImage : 0
 }
-
 export default {
   methods: {
     doByTimeout() {
       setTimeout(() => {
-        changeContainer()
-        let container = document.getElementById("imgContainer").children[currentContainer]
-        let className = " slide" + (Number(array[currentImage]) + 1)
-        container.className = "anim" + className
-        changeImage()
-        setTimeout(() => {
-          container.className = "dark" + className
-        }, 2000)
+        this.hideSlideAndShowNext()
         this.doByTimeout()
-      }, 3000);
-
+      }, 3000)
     },
-
+    showSlide() {
+      this.container().className = "anim" + this.className()
+      changeImage()
+    },
+    container() {
+      return document.getElementById("imgContainer").children[currentContainerIndex]
+    },
+    className() {
+      return " slide" + (Number(array[currentImage]) + 1)
+    },
+    hideSlideAndShowNext() {
+      changeContainer()
+      this.container().className = this.container().className.replace("anim", "dark")
+      setTimeout(() => {
+        this.showSlide()
+      }, 1000)
+    },
+    show4Slides(){
+      [0,1,2,3].forEach(index => {
+        setTimeout(() => {
+          setContainer(index)
+          this.showSlide()
+        }, 100)
+      })
+    }
+  },
+  computed: {
 
   },
   mounted() {
-    this.doByTimeout();
-
+    this.show4Slides()
+    this.doByTimeout()
   }
 } 
 </script>
