@@ -2,9 +2,9 @@
   <div id="topMenu">
     <div class="title clickable" v-on:click="clickMenu"> </div>
     <ul class="menu" :class="listClassName">
+      <li class="clickable" @click="toggleNews">news</li>
       <li class="clickable" @click="toggleLinks">links</li>
       <li class="clickable" @click="toggleTshirts">t-shirts</li>
-      <li class="clickable" @click="toggleNews">news</li>
     </ul>
     <Links v-if="linksShown" @hide-subpage="hideSubpage"/>
     <Tshirts v-if="tShirtsShown" @hide-subpage="hideSubpage"/>

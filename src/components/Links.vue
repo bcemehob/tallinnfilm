@@ -1,5 +1,5 @@
 <template>
-  <div id="links" :class="listClassName">
+  <div id="links" class="subPage" :class="listClassName">
     <div class="close-box clickable" @click="hideList">x</div>
     <ul class="links">
       <li class="clickable">

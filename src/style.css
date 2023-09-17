@@ -169,21 +169,51 @@ button:focus-visible {
     transition: filter 200ms;
 }
 
-#links {
-    position: absolute;
-    border-radius: 5px;
-    background-color: rgb(218 216 208 / 10%);
-    left: 85px;
-    top: 37px;
-    z-index: 100;
+a:hover {
+    color: #dad8d0;
 }
+
+button {
+    background-color: #f9f9f9;
+}
+
+#topMenu {
+    color: #dad8d0;
+    user-select: none;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    font-size: 20px;
+    width: 86%;
+}
+
+#topMenu .title {
+    margin-top: 8px;
+    background: center / contain no-repeat url(./assets/img/burger_menu2.svg);
+    width: 20px;
+    height: 20px;
+}
+
+#topMenu .title, #topMenu .menu div {
+    padding: 10px 20px 0;
+}
+
+#topMenu .menu {
+    padding-inline-start: 20px;
+}
+
+#topMenu .menu.shown {
+    display: block;
+}
+
+
 .subPage .text {
     padding: 1em;
 }
 .subPage {
     position: absolute;
     border-radius: 5px;
-    background-color: rgb(218 216 208 / 10%);
+    background-color: rgb(20 0 0 / 85%);
     left: 85px;
     top: 37px;
     z-index: 100;
@@ -193,15 +223,21 @@ button:focus-visible {
     right: 10px;
 }
 
-#links ul {
-    padding-inline: 1em;
-}
-
-#links a {
+.subPage a {
     margin-top: 15px;
     color: #dad8d0;
     background: center bottom / 14px repeat-x url(./assets/img/underline2.svg);
 }
+
+
+#links ul {
+    padding-inline: 1em;
+}
+
+
+.subpage-title {
+}
+
 
 @font-face {
     font-family: "special-elite";
@@ -227,41 +263,5 @@ button:focus-visible {
         /* background-color: #ffffff; */
     }
 
-    a:hover {
-        color: #dad8d0;
-    }
-
-    button {
-        background-color: #f9f9f9;
-    }
-
-    #topMenu {
-        color: #dad8d0;
-        user-select: none;
-        position: absolute;
-        z-index: 100;
-        cursor: pointer;
-        font-size: 20px;
-    }
-
-    #topMenu .title {
-        margin-top: 8px;
-        background: center / contain no-repeat url(./assets/img/burger_menu2.svg);
-        width: 20px;
-        height: 20px;
-    }
-
-    #topMenu .title, #topMenu .menu div {
-        padding: 10px 20px 0;
-    }
-
-    #topMenu .menu {
-        padding-inline-start: 20px;
-    }
-
-
-    #topMenu .menu.shown {
-        display: block;
-    }
 }
 
