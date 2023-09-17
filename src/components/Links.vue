@@ -28,8 +28,6 @@ export default {
       this.$emit('hide-subpage')
     },
   },
-  mounted() {
-  }
-} 
+}
 </script>
 <style scoped></style>
