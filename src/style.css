@@ -91,10 +91,6 @@ button:focus-visible {
     filter: drop-shadow(0 0 5px #dad8d0);
 }
 
-.card {
-    padding: 2em;
-}
-
 #app {
     width: 100vw;
     max-width: 1300px;
@@ -122,73 +118,34 @@ button:focus-visible {
 
 .wallpaper .dark {
     opacity: 0;
-    transition: opacity 2s linear;
+    transition: opacity 1s linear;
 }
 
 
-.wallpaper .slide1 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_01.jpg)
-}
-
-.wallpaper .slide2 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_02.jpg)
-}
-
-.wallpaper .slide3 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_03.jpg)
-}
-
-.wallpaper .slide4 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_04.jpg)
-}
-
-.wallpaper .slide5 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_05.jpg)
-}
-
-.wallpaper .slide6 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_06.jpg)
-}
-
-.wallpaper .slide7 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_07.jpg)
-}
-
-.wallpaper .slide8 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_08.jpg)
-}
-
-.wallpaper .slide9 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_09.jpg)
-}
-
-.wallpaper .slide10 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_10.jpg)
-}
-
-.wallpaper .slide11 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_11.jpg)
-}
-
-.wallpaper .slide12 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_12.jpg)
-}
-
-.wallpaper .slide13 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_13.jpg)
-}
-
-.wallpaper .slide14 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_14.jpg)
-}
-
-.wallpaper .slide15 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_15.jpg)
-}
-
-.wallpaper .slide16 {
-    background: center / contain no-repeat url(./assets/img/slides/fort_16.jpg)
-}
+.wallpaper .slide1 {background: center / contain no-repeat url(./assets/img/slides/fort_01.jpg)}
+.wallpaper .slide2 {background: center / contain no-repeat url(./assets/img/slides/fort_02.jpg)}
+.wallpaper .slide3 {background: center / contain no-repeat url(./assets/img/slides/fort_03.jpg)}
+.wallpaper .slide4 {background: center / contain no-repeat url(./assets/img/slides/fort_04.jpg)}
+.wallpaper .slide5 {background: center / contain no-repeat url(./assets/img/slides/fort_05.jpg)}
+.wallpaper .slide6 {background: center / contain no-repeat url(./assets/img/slides/fort_06.jpg)}
+.wallpaper .slide7 {background: center / contain no-repeat url(./assets/img/slides/fort_07.jpg)}
+.wallpaper .slide8 {background: center / contain no-repeat url(./assets/img/slides/fort_08.jpg)}
+.wallpaper .slide9 {background: center / contain no-repeat url(./assets/img/slides/fort_09.jpg)}
+.wallpaper .slide10 {background: center / contain no-repeat url(./assets/img/slides/fort_10.jpg)}
+.wallpaper .slide11 {background: center / contain no-repeat url(./assets/img/slides/fort_11.jpg)}
+.wallpaper .slide12 {background: center / contain no-repeat url(./assets/img/slides/fort_12.jpg)}
+.wallpaper .slide13 {background: center / contain no-repeat url(./assets/img/slides/fort_13.jpg)}
+.wallpaper .slide14 {background: center / contain no-repeat url(./assets/img/slides/fort_14.jpg)}
+.wallpaper .slide15 {background: center / contain no-repeat url(./assets/img/slides/fort_15.jpg)}
+.wallpaper .slide16 {background: center / contain no-repeat url(./assets/img/slides/fort_17.jpg)}
+.wallpaper .slide17 {background: center / contain no-repeat url(./assets/img/slides/fort_18.jpg)}
+.wallpaper .slide18 {background: center / contain no-repeat url(./assets/img/slides/fort_19.jpg)}
+.wallpaper .slide19 {background: center / contain no-repeat url(./assets/img/slides/fort_20.jpg)}
+.wallpaper .slide20 {background: center / contain no-repeat url(./assets/img/slides/fort_21.jpg)}
+.wallpaper .slide21 {background: center / contain no-repeat url(./assets/img/slides/fort_22.jpg)}
+.wallpaper .slide22 {background: center / contain no-repeat url(./assets/img/slides/fort_23.jpg)}
+.wallpaper .slide23 {background: center / contain no-repeat url(./assets/img/slides/fort_24.jpg)}
+.wallpaper .slide24 {background: center / contain no-repeat url(./assets/img/slides/fort_25.jpg)}
 
 @keyframes showPhoto {
     0% {
