@@ -137,15 +137,16 @@ button:focus-visible {
 .wallpaper .slide13 {background: center / contain no-repeat url(./assets/img/slides/fort_13.jpg)}
 .wallpaper .slide14 {background: center / contain no-repeat url(./assets/img/slides/fort_14.jpg)}
 .wallpaper .slide15 {background: center / contain no-repeat url(./assets/img/slides/fort_15.jpg)}
-.wallpaper .slide16 {background: center / contain no-repeat url(./assets/img/slides/fort_17.jpg)}
-.wallpaper .slide17 {background: center / contain no-repeat url(./assets/img/slides/fort_18.jpg)}
-.wallpaper .slide18 {background: center / contain no-repeat url(./assets/img/slides/fort_19.jpg)}
-.wallpaper .slide19 {background: center / contain no-repeat url(./assets/img/slides/fort_20.jpg)}
-.wallpaper .slide20 {background: center / contain no-repeat url(./assets/img/slides/fort_21.jpg)}
-.wallpaper .slide21 {background: center / contain no-repeat url(./assets/img/slides/fort_22.jpg)}
-.wallpaper .slide22 {background: center / contain no-repeat url(./assets/img/slides/fort_23.jpg)}
-.wallpaper .slide23 {background: center / contain no-repeat url(./assets/img/slides/fort_24.jpg)}
-.wallpaper .slide24 {background: center / contain no-repeat url(./assets/img/slides/fort_25.jpg)}
+.wallpaper .slide16 {background: center / contain no-repeat url(./assets/img/slides/fort_16.jpg)}
+.wallpaper .slide17 {background: center / contain no-repeat url(./assets/img/slides/fort_17.jpg)}
+.wallpaper .slide18 {background: center / contain no-repeat url(./assets/img/slides/fort_18.jpg)}
+.wallpaper .slide19 {background: center / contain no-repeat url(./assets/img/slides/fort_19.jpg)}
+.wallpaper .slide20 {background: center / contain no-repeat url(./assets/img/slides/fort_20.jpg)}
+.wallpaper .slide21 {background: center / contain no-repeat url(./assets/img/slides/fort_21.jpg)}
+.wallpaper .slide22 {background: center / contain no-repeat url(./assets/img/slides/fort_22.jpg)}
+.wallpaper .slide23 {background: center / contain no-repeat url(./assets/img/slides/fort_23.jpg)}
+.wallpaper .slide24 {background: center / contain no-repeat url(./assets/img/slides/fort_24.jpg)}
+.wallpaper .slide25 {background: center / contain no-repeat url(./assets/img/slides/fort_25.jpg)}
 
 @keyframes showPhoto {
     0% {
@@ -158,49 +159,7 @@ button:focus-visible {
     }
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #dad8d0;
-        /* background-color: #ffffff; */
-    }
 
-    a:hover {
-        color: #dad8d0;
-    }
-
-    button {
-        background-color: #f9f9f9;
-    }
-
-    #topMenu {
-        color: #dad8d0;
-        user-select: none;
-        position: absolute;
-        z-index: 100;
-        cursor: pointer;
-        font-size: 20px;
-    }
-
-    #topMenu .title {
-        margin-top: 8px;
-        background: center / contain no-repeat url(./assets/img/burger_menu2.svg);
-        width: 20px;
-        height: 20px;
-    }
-
-    #topMenu .title, #topMenu .menu div {
-        padding: 10px 20px 0;
-    }
-
-    #topMenu .menu {
-        padding-inline-start: 20px;
-    }
-
-
-    #topMenu .menu.shown {
-        display: block;
-    }
-}
 .hidden {
     display: none;
 }
@@ -247,5 +206,62 @@ button:focus-visible {
 @font-face {
     font-family: "special-elite";
     src: url(./assets/fonts/SpecialElite-Regular.ttf) format("truetype");
+}
+
+@media (max-width: 919px) {
+    .logo {
+        top: 275px;
+        height: 130px;
+        width: 130px;
+    }
+    .wallpaper div {
+        min-height: 300px;
+        margin-bottom: 100px;
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #dad8d0;
+        /* background-color: #ffffff; */
+    }
+
+    a:hover {
+        color: #dad8d0;
+    }
+
+    button {
+        background-color: #f9f9f9;
+    }
+
+    #topMenu {
+        color: #dad8d0;
+        user-select: none;
+        position: absolute;
+        z-index: 100;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    #topMenu .title {
+        margin-top: 8px;
+        background: center / contain no-repeat url(./assets/img/burger_menu2.svg);
+        width: 20px;
+        height: 20px;
+    }
+
+    #topMenu .title, #topMenu .menu div {
+        padding: 10px 20px 0;
+    }
+
+    #topMenu .menu {
+        padding-inline-start: 20px;
+    }
+
+
+    #topMenu .menu.shown {
+        display: block;
+    }
 }
 
