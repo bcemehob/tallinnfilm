@@ -167,6 +167,7 @@ button:focus-visible {
 .clickable:hover {
     filter: drop-shadow(0 0 7px #dad8d0);
     transition: filter 200ms;
+    cursor: pointer;
 }
 
 a:hover {
@@ -182,7 +183,6 @@ button {
     user-select: none;
     position: absolute;
     z-index: 100;
-    cursor: pointer;
     font-size: 20px;
     width: 86%;
 }
@@ -206,7 +206,23 @@ button {
     display: block;
 }
 
+#topMenu .external-link {
+    margin: 20px 0;
+    padding-left: 50px;
+}
 
+#topMenu .external-link.spotify {background: center left / contain no-repeat url(/src/assets/img/spotify.svg)}
+#topMenu .external-link.yt-music {background: center left / contain no-repeat url(/src/assets/img/ytmusic.svg);}
+#topMenu .external-link.bandcamp {background: center left / contain no-repeat url(/src/assets/img/bandcamp.svg);}
+#topMenu .external-link.facebook {background: center left / contain no-repeat url(/src/assets/img/facebook.svg);}
+#topMenu .external-link.youtube {background: center left / contain no-repeat url(/src/assets/img/youtube.svg);}
+#topMenu .external-link.instagram {background: center left / contain no-repeat url(/src/assets/img/instagram.svg);}
+
+
+.close-box {
+    margin: 10px 20px;
+    cursor: pointer;
+}
 .subPage .text {
     padding: 1em;
 }
@@ -217,6 +233,7 @@ button {
     left: 85px;
     top: 37px;
     z-index: 100;
+    padding: 10px;
 }
 .close-box {
     position: absolute;
@@ -229,6 +246,10 @@ button {
     background: center bottom / 14px repeat-x url(./assets/img/underline2.svg);
 }
 
+.rus {
+    font-size: 26px;
+    font-family: true-typewriter-rus, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
 
 #links ul {
     padding-inline: 1em;
@@ -242,6 +263,10 @@ button {
 @font-face {
     font-family: "special-elite";
     src: url(./assets/fonts/SpecialElite-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "true-typewriter-rus";
+    src: url(./assets/fonts/TTWPGOTT.ttf);
 }
 
 @media (max-width: 919px) {
