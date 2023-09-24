@@ -211,12 +211,22 @@ button {
     padding-left: 50px;
 }
 
-#topMenu .external-link.spotify {background: center left / contain no-repeat url(/src/assets/img/spotify.svg)}
-#topMenu .external-link.yt-music {background: center left / contain no-repeat url(/src/assets/img/ytmusic.svg);}
-#topMenu .external-link.bandcamp {background: center left / contain no-repeat url(/src/assets/img/bandcamp.svg);}
-#topMenu .external-link.facebook {background: center left / contain no-repeat url(/src/assets/img/facebook.svg);}
-#topMenu .external-link.youtube {background: center left / contain no-repeat url(/src/assets/img/youtube.svg);}
-#topMenu .external-link.instagram {background: center left / contain no-repeat url(/src/assets/img/instagram.svg);}
+#topMenu .inline-list .external-link {
+    display: inline-block;
+    margin-right: 25px;
+    font-size: 17px;
+    padding-left: 35px;
+}
+
+#topMenu .external-link.spotify {background: center left / 25px no-repeat url(/src/assets/img/spotify.svg)}
+#topMenu .external-link.yt-music {background: center left / 25px no-repeat url(/src/assets/img/ytmusic.svg);}
+#topMenu .external-link.bandcamp {background: center left / 25px no-repeat url(/src/assets/img/bandcamp.svg);}
+#topMenu .external-link.facebook {background: center left / 25px no-repeat url(/src/assets/img/facebook.svg);}
+#topMenu .external-link.youtube {background: center left / 25px no-repeat url(/src/assets/img/youtube.svg);}
+#topMenu .external-link.instagram {background: center left / 25px no-repeat url(/src/assets/img/instagram.svg);}
+#topMenu .external-link.apple-music {background: center left / 25px no-repeat url(/src/assets/img/applemusic.svg);}
+#topMenu .external-link.amazon-music {background: center left / 25px no-repeat url(/src/assets/img/amazonmusic.svg);}
+#topMenu .external-link.deezer {background: center left / 25px no-repeat url(/src/assets/img/deezer.svg);}
 
 
 .close-box {
