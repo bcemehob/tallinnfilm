@@ -1,6 +1,6 @@
 <template>
   <div id="tshirts" class="subPage">
-    <div class="close-box clickable" @click="hideList">x</div>
+    <div class="close-box clickable" @click="hideSubpage">x</div>
     <div class="text">
       <div class="subpage-title">
         T-Shirt!
@@ -15,16 +15,10 @@
 <script>
 
 export default {
-  data()  {
-    return {
-      listClassName: 'shown'
-    }
-  },
   methods: {
-    hideList() {
+    hideSubpage() {
       this.$emit('hide-subpage')
     },
   },
 }
 </script>
-<style scoped></style>

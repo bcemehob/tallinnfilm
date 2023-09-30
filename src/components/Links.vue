@@ -1,6 +1,6 @@
 <template>
-  <div id="links" class="subPage" :class="listClassName">
-    <div class="close-box clickable" @click="hideList">x</div>
+  <div id="links" class="subPage">
+    <div class="close-box clickable" @click="hideSubpage">x</div>
     <div class="text">
       <div class="subpage-title">
         Links
@@ -22,18 +22,11 @@
 </template>
 
 <script>
-
 export default {
-  data()  {
-    return {
-      listClassName: 'shown'
-    }
-  },
   methods: {
-    hideList() {
+    hideSubpage() {
       this.$emit('hide-subpage')
     },
   },
 }
 </script>
-<style scoped></style>

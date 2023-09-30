@@ -31,11 +31,6 @@
 <script>
 
 export default {
-  data()  {
-    return {
-      listClassName: 'shown'
-    }
-  },
   methods: {
     hideSubpage() {
       this.$emit('hide-subpage')
