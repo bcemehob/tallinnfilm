@@ -1,6 +1,6 @@
 <template>
   <div id="topMenu">
-    <div class="title clickable" @click="clickMenu"> </div>
+    <BurgerMenuIcon class="clickable title" @click="clickMenu" />
     <ul class="menu" :class="listClassName">
       <li class="clickable" @click="toggleUpcoming">upcoming</li>
       <li class="clickable" @click="toggleNews">news</li>
@@ -16,13 +16,14 @@
 
 <script>
 
+import BurgerMenuIcon from "./BurgerMenuIcon.vue";
 import Links from "./Links.vue"
 import Tshirts from "./Tshirts.vue"
 import News from "./News.vue"
 import Upcoming from "./Upcoming.vue"
 
 export default {
-  components: {Links, Tshirts, News, Upcoming},
+  components: {BurgerMenuIcon, Links, Tshirts, News, Upcoming},
   data()  {
     return {
       listClassName: 'hidden',
