@@ -4,9 +4,10 @@
     <div class="text">
       <div class="subpage-title">Upcoming Events</div>
       <ul class="inline-list">
-        <li>On Ocn 20th, 2023 Tallinnfilm band will perform at
-          <a href="https://www.facebook.com/fortbar.tallinn" target="_blank">Fort Bar</a>
-           in the joint session with Nonsens band </li>
+        <li>On Dec 14th, 2024 Tallinnfilm band will perform at
+          <a href="https://www.facebook.com/fortbar.tallinn" target="_blank">Fort Bar</a> (joint event) </li>
+        <li>On Jan 3rd, 2025 Tallinnfilm band will perform at
+          <a href="https://www.facebook.com/fortbar.tallinn" target="_blank">Fort Bar</a> (joint event) </li>
       </ul>
     </div>
   </div>
