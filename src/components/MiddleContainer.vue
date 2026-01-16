@@ -11,7 +11,7 @@ defineProps({
 })
 </script>
 <script>
-const NUMBER_OF_IMAGES = 25
+const NUMBER_OF_IMAGES = 41
 const NUMBER_OF_CONTAINERS = window.innerWidth < 920 ? 2 : 4
 let currentImage = 0
 let currentContainerIndex = 1

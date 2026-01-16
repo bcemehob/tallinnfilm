@@ -147,7 +147,22 @@ button:focus-visible {
 .wallpaper .slide23 {background: center / contain no-repeat url(./assets/img/slides/fort_23.jpg)}
 .wallpaper .slide24 {background: center / contain no-repeat url(./assets/img/slides/fort_24.jpg)}
 .wallpaper .slide25 {background: center / contain no-repeat url(./assets/img/slides/fort_25.jpg)}
-
+.wallpaper .slide26 {background: center / contain no-repeat url(./assets/img/slides/fort_26.jpg)}
+.wallpaper .slide27 {background: center / contain no-repeat url(./assets/img/slides/fort_27.jpg)}
+.wallpaper .slide28 {background: center / contain no-repeat url(./assets/img/slides/fort_28.jpg)}
+.wallpaper .slide29 {background: center / contain no-repeat url(./assets/img/slides/fort_29.jpg)}
+.wallpaper .slide30 {background: center / contain no-repeat url(./assets/img/slides/fort_30.jpg)}
+.wallpaper .slide31 {background: center / contain no-repeat url(./assets/img/slides/fort_31.jpg)}
+.wallpaper .slide32 {background: center / contain no-repeat url(./assets/img/slides/fort_32.jpg)}
+.wallpaper .slide33 {background: center / contain no-repeat url(./assets/img/slides/fort_33.jpg)}
+.wallpaper .slide34 {background: center / contain no-repeat url(./assets/img/slides/fort_34.jpg)}
+.wallpaper .slide35 {background: center / contain no-repeat url(./assets/img/slides/fort_35.jpg)}
+.wallpaper .slide36 {background: center / contain no-repeat url(./assets/img/slides/fort_36.jpg)}
+.wallpaper .slide37 {background: center / contain no-repeat url(./assets/img/slides/fort_37.jpg)}
+.wallpaper .slide38 {background: center / contain no-repeat url(./assets/img/slides/fort_38.jpg)}
+.wallpaper .slide39 {background: center / contain no-repeat url(./assets/img/slides/fort_39.jpg)}
+.wallpaper .slide40 {background: center / contain no-repeat url(./assets/img/slides/fort_40.jpg)}
+.wallpaper .slide41 {background: center / contain no-repeat url(./assets/img/slides/fort_41.jpg)}
 @keyframes showPhoto {
     0% {
         opacity: 0;
