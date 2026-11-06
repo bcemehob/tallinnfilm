@@ -1,5 +1,5 @@
 :root {
-    font-family: special-elite, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: special-elite, true-typewriter-rus, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
@@ -41,6 +41,11 @@ body {
     min-width: 320px;
     min-height: 100vh;
 }
+
+body.a3a3a3a-album-page{
+    /* background: radial-gradient(ellipse 100% 150% at 0% 47%, rgba(140, 21, 15, 0.45) 36%, #1d0304 60%), #1d0304; */
+}
+
 
 h1 {
     font-size: 3.2em;
@@ -292,6 +297,13 @@ button {
 
 
 @font-face {
+    font-family: "Sacramento";
+    src: url(./assets/fonts/Sacramento-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "special-elite";
     src: url(./assets/fonts/SpecialElite-Regular.ttf) format("truetype");
 }
@@ -320,4 +332,3 @@ button {
     }
 
 }
-
