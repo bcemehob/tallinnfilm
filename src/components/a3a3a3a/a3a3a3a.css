@@ -341,7 +341,7 @@ dt.credit-name-cyr {
 .album-info {
   color: color-mix(in srgb, var(--paper) 75%, transparent);
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 .copyright-symbol {
@@ -353,7 +353,15 @@ dt.credit-name-cyr {
 }
 
 .album-info p {
-  margin: 0 0 20px;
+  margin: 0 0 14px;
+}
+
+.upc-barcode {
+  display: block;
+  width: min(156px, 100%);
+  height: auto;
+  margin: 0 0 12px;
+  filter: contrast(1.05);
 }
 
 .special-thanks {

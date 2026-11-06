@@ -172,6 +172,8 @@
             in 2024–2026 <br />
             at STuudio Records,<br />
             Tallinn, Estonia</p>
+            <p>UPC: 885000851872</p>
+            <img class="upc-barcode" :src="upcBarcode" alt="UPC barcode 885000851872" />
             <p><span class="copyright-symbol">©</span> 2026 Vadim Semenov<br /><span class="copyright-symbol phonogram-symbol">℗</span> 2026 Vadim Semenov</p>
           </div>
         </div>
@@ -197,6 +199,7 @@ import youtubeMusicIcon from '../../assets/img/ytmusic.svg'
 import appleMusicIcon from '../../assets/img/applemusic.svg'
 import amazonMusicIcon from '../../assets/img/amazonmusic.svg'
 import deezerIcon from '../../assets/img/deezer.svg'
+import upcBarcode from '../../assets/img/a3a3a3a/upc-barcode.png'
 
 const albumImages = [albumImage1, albumImage2, albumImage3, albumImage4]
 const currentSlide = ref(0)
