@@ -35,7 +35,40 @@
         </p>
       </div>
 
-      <img class="album-cover" :src="albumCover" alt="A3a3a3a! album cover" />
+      <div class="album-carousel" aria-label="Album artwork carousel">
+        <div class="album-carousel-track" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
+          <img
+            v-for="(image, index) in albumImages"
+            :key="image"
+            class="album-cover"
+            :src="image"
+            :alt="`Album artwork ${index + 1} of ${albumImages.length}`"
+            :aria-hidden="index !== currentSlide"
+          />
+        </div>
+        <button
+          v-if="currentSlide > 0"
+          class="carousel-arrow carousel-arrow-previous"
+          type="button"
+          aria-label="Show previous image"
+          @click="currentSlide -= 1"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+        <button
+          v-if="currentSlide < albumImages.length - 1"
+          class="carousel-arrow carousel-arrow-next"
+          type="button"
+          aria-label="Show next image"
+          @click="currentSlide += 1"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
+      </div>
       <span class="side-note" aria-hidden="true">STuudio Records 2026 Tallinn </span>
     </section>
 
@@ -153,15 +186,20 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import logo from '../../assets/img/logo_w_no_bg.svg'
-import albumCover from '../../assets/img/a3a3a3a/p1.jpg'
+import albumImage1 from '../../assets/img/a3a3a3a/p1.jpg'
+import albumImage2 from '../../assets/img/a3a3a3a/p2.jpg'
+import albumImage3 from '../../assets/img/a3a3a3a/p3.jpg'
+import albumImage4 from '../../assets/img/a3a3a3a/p4.jpg'
 import spotifyIcon from '../../assets/img/spotify.svg'
 import youtubeMusicIcon from '../../assets/img/ytmusic.svg'
 import appleMusicIcon from '../../assets/img/applemusic.svg'
 import amazonMusicIcon from '../../assets/img/amazonmusic.svg'
 import deezerIcon from '../../assets/img/deezer.svg'
 
+const albumImages = [albumImage1, albumImage2, albumImage3, albumImage4]
+const currentSlide = ref(0)
 let previousTitle
 
 onMounted(() => {
