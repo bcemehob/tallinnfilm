@@ -9,61 +9,42 @@
 
     <section class="hero" aria-labelledby="album-title">
       <div class="hero-copy">
-        <h1 id="album-title">
-          <span class="album-band-name">Tallinnfilm</span>&nbsp;<span class="album-title-script">azazaza!</span>
-        </h1>
-        <p class="intro">
-           <ol class="tracklist">
-            <li><span>Ouverture</span><time>1:23</time></li>
-            <li><span class="track-name-cyrillic">Полетели</span><time>4:04</time></li>
-            <li><span>Melita</span><time>4:29</time></li>
-            <li>
-              <span>Teatri Vabrik<small>In memoriam Timur Ilikajev</small></span>
-              <time>3:19</time>
-            </li>
-            <li>
-              <span>Rocinante<small>In memoriam Alexey Navalny</small></span>
-              <time>4:22</time>
-            </li>
-            <li><span class="track-name-cyrillic">Послевойны</span><time>4:07</time></li>
-            <li><span>La Divina Commedia</span><time>3:41</time></li>
-            <li><span class="track-name-cyrillic">Один Из Нас</span><time>4:37</time></li>
-            <li><span>Lacrimoaзaзaзa!</span><time>4:34</time></li>
-            <li><span class="track-name-cyrillic">Старый Робот</span><time>3:52</time></li>
-            <li><span>Melita (bonus)</span><time>3:55</time></li>
-          </ol>
-        </p>
+        <div class="album-title-script">azazaza!</div>
+        <div class="album-band-name">Tallinnfilm</div>
+        <ol class="tracklist">
+          <li><span>Ouverture</span><time>1:23</time></li>
+          <li><span class="track-name-cyrillic">Полетели</span><time>4:04</time></li>
+          <li><span>Melita</span><time>4:29</time></li>
+          <li>
+            <span>Teatri Vabrik<small>In memoriam Timur Ilikajev</small></span>
+            <time>3:19</time>
+          </li>
+          <li>
+            <span>Rocinante<small>In memoriam Alexey Navalny</small></span>
+            <time>4:22</time>
+          </li>
+          <li><span class="track-name-cyrillic">Послевойны</span><time>4:07</time></li>
+          <li><span>La Divina Commedia</span><time>3:41</time></li>
+          <li><span class="track-name-cyrillic">Один Из Нас</span><time>4:37</time></li>
+          <li><span>Lacrimoaзaзaзa!</span><time>4:34</time></li>
+          <li><span class="track-name-cyrillic">Старый Робот</span><time>3:52</time></li>
+          <li><span>Melita (bonus)</span><time>3:55</time></li>
+        </ol>
       </div>
 
       <div class="album-carousel" aria-label="Album artwork carousel">
         <div class="album-carousel-track" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
-          <img
-            v-for="(image, index) in albumImages"
-            :key="image"
-            class="album-cover"
-            :src="image"
-            :alt="`Album artwork ${index + 1} of ${albumImages.length}`"
-            :aria-hidden="index !== currentSlide"
-          />
+          <img v-for="(image, index) in albumImages" :key="image" class="album-cover" :src="image"
+            :alt="`Album artwork ${index + 1} of ${albumImages.length}`" :aria-hidden="index !== currentSlide" />
         </div>
-        <button
-          v-if="currentSlide > 0"
-          class="carousel-arrow carousel-arrow-previous"
-          type="button"
-          aria-label="Show previous image"
-          @click="currentSlide -= 1"
-        >
+        <button v-if="currentSlide > 0" class="carousel-arrow carousel-arrow-previous" type="button"
+          aria-label="Show previous image" @click="currentSlide -= 1">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="m15 18-6-6 6-6" />
           </svg>
         </button>
-        <button
-          v-if="currentSlide < albumImages.length - 1"
-          class="carousel-arrow carousel-arrow-next"
-          type="button"
-          aria-label="Show next image"
-          @click="currentSlide += 1"
-        >
+        <button v-if="currentSlide < albumImages.length - 1" class="carousel-arrow carousel-arrow-next" type="button"
+          aria-label="Show next image" @click="currentSlide += 1">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="m9 18 6-6-6-6" />
           </svg>
@@ -75,19 +56,22 @@
     <section id="about" class="about" aria-label="Streaming platforms">
       <ul class="streaming-links">
         <li>
-          <a class="featured" href="https://music.apple.com/us/artist/tallinnfilm/1705937339" target="_blank" rel="noopener noreferrer">
+          <a class="featured" href="https://music.apple.com/us/artist/tallinnfilm/1705937339" target="_blank"
+            rel="noopener noreferrer">
             <img :src="appleMusicIcon" alt="" />
             <span>Apple Music</span>
           </a>
         </li>
         <li>
-          <a class="featured" href="https://open.spotify.com/artist/3GJveR781wAjBBFy5YLRrF" target="_blank" rel="noopener noreferrer">
+          <a class="featured" href="https://open.spotify.com/artist/3GJveR781wAjBBFy5YLRrF" target="_blank"
+            rel="noopener noreferrer">
             <img :src="spotifyIcon" alt="" />
             <span>Spotify</span>
           </a>
         </li>
         <li>
-          <a class="featured" href="https://music.youtube.com/channel/UCHLg-88_lk4yxHW5b-voY4Q" target="_blank" rel="noopener noreferrer">
+          <a class="featured" href="https://music.youtube.com/channel/UCHLg-88_lk4yxHW5b-voY4Q" target="_blank"
+            rel="noopener noreferrer">
             <img :src="youtubeMusicIcon" alt="" />
             <span>YouTube Music</span>
           </a>
@@ -99,7 +83,8 @@
           </a>
         </li>
         <li>
-          <a href="https://us.7digital.com/artist/tallinnfilm/release/a3a3a3a-explicit-82053754?f=20%2C19%2C12%2C16%2C17%2C9%2C2" target="_blank" rel="noopener noreferrer">
+          <a href="https://us.7digital.com/artist/tallinnfilm/release/a3a3a3a-explicit-82053754?f=20%2C19%2C12%2C16%2C17%2C9%2C2"
+            target="_blank" rel="noopener noreferrer">
             <span class="streaming-icon-seven-digital" aria-hidden="true">7d</span>
             <span>7digital</span>
           </a>
@@ -120,7 +105,7 @@
           <dl class="credits-list">
             <div>
               <dt class="credit-name-cyr">Стиховед Семенов</dt>
-              <dd>Music, lyrics, vocals, guitar, whistling (4), programming, mixing</dd>
+              <dd>Music, lyrics, vocals, guitar, whistling (4), <br /> programming, mixing</dd>
             </div>
             <div>
               <dt>Slava Mogilevtsev</dt>
@@ -138,10 +123,10 @@
               <dt>Dan Rotar</dt>
               <dd>Drums, screams (1)</dd>
             </div>
-        
+
           </dl>
         </div>
-        <div>
+        <div class="credits-column">
           <h3>Credits</h3>
           <dl class="credits-list">
             <div>
@@ -158,23 +143,27 @@
             </div>
           </dl>
           <p class="special-thanks">
-            <strong>Special thanks:</strong> 
-            <div>Alexey Palych</div>
-            <div>Ian S.</div>
-            <div>Yura D.</div>
-            <div>Grisha M.</div>
+            <strong>Special thanks:</strong>
+          <div>Alexey Palych</div>
+          <div>Ian S.</div>
+          <div>Yura D.</div>
+          <div>Grisha M.</div>
           </p>
         </div>
-        <div>
-          <h3>Info</h3>
+        <div class="info-column">
+          <h3 class="info-title">Info</h3>
           <div class="album-info">
             <p>Recorded, mixed, and mastered<br />
-            in 2024–2026 <br />
-            at STuudio Records,<br />
-            Tallinn, Estonia</p>
+              in 2024–2026 <br />
+              at STuudio Records,<br />
+              Tallinn, Estonia</p>
             <p>UPC: 885000851872</p>
             <img class="upc-barcode" :src="upcBarcode" alt="UPC barcode 885000851872" />
-            <p><span class="copyright-symbol">©</span> 2026 Vadim Semenov<br /><span class="copyright-symbol phonogram-symbol">℗</span> 2026 Vadim Semenov</p>
+            <p><span class="copyright-symbol">©</span> 2026 Vadim Semenov<br />
+              <span class="copyright-symbol phonogram-symbol">℗</span> 2026 Vadim Semenov
+            </p>
+            <div class="piawc"><img :src="ua" alt="putin is a war criminal" /></div>
+
           </div>
         </div>
       </div>
@@ -200,6 +189,7 @@ import appleMusicIcon from '../../assets/img/applemusic.svg'
 import amazonMusicIcon from '../../assets/img/amazonmusic.svg'
 import deezerIcon from '../../assets/img/deezer.svg'
 import upcBarcode from '../../assets/img/a3a3a3a/upc-barcode.png'
+import ua from '../../assets/img/a3a3a3a/ua.png'
 
 const albumImages = [albumImage1, albumImage2, albumImage3, albumImage4]
 const currentSlide = ref(0)

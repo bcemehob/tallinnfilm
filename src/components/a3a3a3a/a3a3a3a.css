@@ -2,6 +2,8 @@
   --paper: #dad8d0;
   --ink: #1d0304;
   --red: #a33b2c;
+  --yellow: #d18a67;
+  --rouge:#8c150f;
   min-height: 100vh;
   box-sizing: border-box;
   color: var(--paper);
@@ -57,7 +59,6 @@
   align-items: center;
   padding: 0 3em;
   gap: clamp(36px, 8vw, 20px);
-  /* max-width: 1120px; */
   min-height: min(800px, calc(100vh - 110px));
   margin: 0 auto;
 }
@@ -69,7 +70,7 @@
 
 .eyebrow {
   margin: 0 0 24px;
-  color: #d18a67;
+  color: var(--yellow);
   font-size: 12px;
   letter-spacing: 0.17em;
   text-transform: uppercase;
@@ -88,11 +89,17 @@ h1 .album-band-name {
   font-size: clamp(16px, 6vw, 24px);
   font-weight: 400;
   letter-spacing: -0.07em;
+  margin-top: -5px;
   text-transform: none;
 }
 
+.album-title-script,
+.album-band-name {
+  display: block;
+  text-align: right;
+}
+
 .album-title-script {
-  display: inline-block;
   font-family: "Sacramento", cursive;
   font-size: clamp(42px, 5.5vw, 76px);
   font-weight: 400;
@@ -101,9 +108,22 @@ h1 .album-band-name {
   color: var(--paper);
   opacity: 1;
   text-transform: none;
+  text-shadow: 0 0 0.12em var(--yellow), 0 0 0.32em color-mix(in srgb, var(--yellow) 90%, transparent);
+  animation: album-title-glow 8s ease-in-out infinite;
   transform: skewX(-20deg);
   transform-origin: center;
-  margin-bottom: 0.25em;
+  margin-top: -25px;
+}
+
+@keyframes album-title-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 0.12em var(--yellow), 0 0 0.32em color-mix(in srgb, var(--yellow) 90%, transparent);
+  }
+
+  50% {
+    text-shadow: 0 0 0.12em var(--rouge), 0 0 0.32em color-mix(in srgb, var(--rouge) 90%, transparent);
+  }
 }
 
 
@@ -124,18 +144,32 @@ h1 .album-band-name {
 }
 
 .discover-link span {
-  color: #d18a67;
+  color: var(--yellow);
   font-size: 18px;
 }
 
 .album-carousel {
   position: relative;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
   order: -1;
   align-self: center;
   justify-self: stretch;
   overflow: hidden;
-  box-shadow: 0 0 42px rgba(140, 21, 15, 0.8);
+  box-shadow: 0 0 42px color-mix(in srgb, var(--rouge) 80%, transparent);
+  animation: carousel-glow 8s ease-in-out infinite;
+}
+
+@keyframes carousel-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 42px color-mix(in srgb, var(--rouge) 80%, transparent);
+  }
+
+  50% {
+    box-shadow: 0 0 42px color-mix(in srgb, var(--yellow) 80%, transparent);
+  }
 }
 
 .album-carousel-track {
@@ -201,6 +235,14 @@ h1 .album-band-name {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .album-carousel {
+    animation: none;
+  }
+
+  .album-title-script {
+    animation: none;
+  }
+
   .album-carousel-track {
     transition: none;
   }
@@ -245,10 +287,9 @@ h1 .album-band-name {
 }
 
 .album-details {
-  /* max-width: 1000px; */
   margin: 0 auto;
   font-size: 1em;
-  padding:  3em;
+  padding: 3em;
   border-top: 1px solid rgb(232 223 205 / 20%);
 }
 
@@ -260,13 +301,13 @@ h1 .album-band-name {
 
 .details-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
   gap: clamp(24px, 5vw, 64px);
 }
 
 .details-grid h3 {
   margin: 0 0 20px;
-  color: #d18a67;
+  color: var(--yellow);
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.14em;
@@ -278,6 +319,9 @@ h1 .album-band-name {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.tracklist {
+  margin-top: 1em;
 }
 
 .tracklist li {
@@ -291,12 +335,12 @@ h1 .album-band-name {
   font-size: 1.2em;
 }
 
-.tracklist li > span {
+.tracklist li>span {
   flex: 1;
   text-align: left;
 }
 
-.tracklist li > time {
+.tracklist li>time {
   margin-left: auto;
   text-align: right;
 }
@@ -318,8 +362,13 @@ h1 .album-band-name {
   font-variant-numeric: tabular-nums;
 }
 
-.credits-list > div {
+.credits-list>div {
   margin-bottom: 0.7em;
+}
+
+.info-column .piawc {
+  float: right;
+  width: 14%;
 }
 
 .credits-list dt {
@@ -342,6 +391,11 @@ dt.credit-name-cyr {
   color: color-mix(in srgb, var(--paper) 75%, transparent);
   font-size: 14px;
   line-height: 1.5;
+  text-align: right;
+}
+
+.info-title {
+  text-align: right;
 }
 
 .copyright-symbol {
@@ -360,7 +414,7 @@ dt.credit-name-cyr {
   display: block;
   width: min(156px, 100%);
   height: auto;
-  margin: 0 0 12px;
+  margin: 0 0 12px auto;
   filter: contrast(1.05);
 }
 
@@ -410,6 +464,10 @@ dt.credit-name-cyr {
   object-fit: contain;
 }
 
+.streaming-links img {
+  transition: filter 180ms ease;
+}
+
 .streaming-links a.featured {
   font-size: 18px;
 }
@@ -420,7 +478,11 @@ dt.credit-name-cyr {
 }
 
 .streaming-links a:hover {
-  color: #d18a67;
+  color: var(--yellow);
+}
+
+.streaming-links a:hover img {
+  filter: brightness(0) saturate(100%) invert(65%) sepia(25%) saturate(900%) hue-rotate(332deg) brightness(90%) contrast(85%);
 }
 
 .streaming-icon-seven-digital {
@@ -431,6 +493,14 @@ dt.credit-name-cyr {
   font-family: Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
+}
+
+.piawc img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
 }
 
 .album-footer {
