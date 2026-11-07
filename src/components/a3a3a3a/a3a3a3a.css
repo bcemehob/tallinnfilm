@@ -157,6 +157,7 @@ h1 .album-band-name {
   align-self: center;
   justify-self: stretch;
   overflow: hidden;
+  background: radial-gradient(circle at center, var(--yellow) 0%, var(--ink) 100%);
   box-shadow: 0 0 42px color-mix(in srgb, var(--rouge) 80%, transparent);
   animation: carousel-glow 8s ease-in-out infinite;
 }

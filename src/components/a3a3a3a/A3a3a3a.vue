@@ -183,6 +183,7 @@ import albumImage1 from '../../assets/img/a3a3a3a/p1.jpg'
 import albumImage2 from '../../assets/img/a3a3a3a/p2.jpg'
 import albumImage3 from '../../assets/img/a3a3a3a/p3.jpg'
 import albumImage4 from '../../assets/img/a3a3a3a/p4.jpg'
+import albumImage5 from '../../assets/img/a3a3a3a/p5.png'
 import spotifyIcon from '../../assets/img/spotify.svg'
 import youtubeMusicIcon from '../../assets/img/ytmusic.svg'
 import appleMusicIcon from '../../assets/img/applemusic.svg'
@@ -191,7 +192,7 @@ import deezerIcon from '../../assets/img/deezer.svg'
 import upcBarcode from '../../assets/img/a3a3a3a/upc-barcode.png'
 import ua from '../../assets/img/a3a3a3a/ua.png'
 
-const albumImages = [albumImage1, albumImage2, albumImage3, albumImage4]
+const albumImages = [albumImage1, albumImage2, albumImage3, albumImage4, albumImage5]
 const currentSlide = ref(0)
 let previousTitle
 
