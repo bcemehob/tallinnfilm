@@ -198,7 +198,7 @@ let previousTitle
 
 onMounted(() => {
   previousTitle = document.title
-  document.title = 'New Album — Tallinnfilm'
+  document.title = 'a3a3a3a! — Tallinnfilm'
   document.body.classList.add('a3a3a3a-album-page')
 
 })
