@@ -4,7 +4,10 @@
       <a class="wordmark" href="/" aria-label="Tallinnfilm home">
         <img :src="logo" alt="Tallinnfilm" />
       </a>
-      <a class="back-link" href="/">← Back to the site</a>
+      <!-- <a class="back-link" href="/">← Back to the site</a> -->
+      <a class="album-presentation-link" href="https://www.facebook.com/events/2379397392893359" target="_blank" >
+        <span class="album-presentation-label">11/27, BH pub: Album presentation</span>
+      </a>
     </header>
 
     <section class="hero" aria-labelledby="album-title">
